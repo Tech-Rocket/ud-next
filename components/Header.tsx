@@ -4,6 +4,7 @@ import Link from "next/link";
 import HeaderLogo from "@/assets/logo.png";
 import { Poppins } from "next/font/google";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,7 +24,12 @@ export default function Header() {
         href="/"
         className="text-3xl font-bold flex gap-5 items-center tracking-wide"
       >
-        <img src={HeaderLogo.src} alt="header logo" className="w-18 h-18" />
+        <Image
+          src={HeaderLogo}
+          alt="header logo"
+          className="w-19 h-19"
+          priority
+        />
         NextLevel Food
       </Link>
 
