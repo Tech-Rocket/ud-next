@@ -47,6 +47,7 @@ export default function RootLayout({
             ></path>
           </svg>
         </div>
+
         {children}
       </body>
     </html>

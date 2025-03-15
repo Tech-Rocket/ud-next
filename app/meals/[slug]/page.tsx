@@ -1,5 +1,7 @@
-import React from "react";
-
-export default function Meal() {
-  return <div>Meal page</div>;
+export default function MealDetails() {
+  return (
+    <>
+      <h1>Meal details page</h1>
+    </>
+  );
 }
