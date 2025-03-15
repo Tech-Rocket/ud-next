@@ -30,8 +30,8 @@ export default function Header() {
       <nav className="">
         <ul className="list-none m-0 p-0 flex gap-[1.5rem] font-[1.5rem]">
           <li
-            className={` duration-200 transform  text-[#ddd6cb] py-2 font-bold px-4 ${
-              pathname === "/meals" ? "border border-white rounded-sm" : ""
+            className={` duration-200 transform  border-white text-[#ddd6cb] py-2 font-bold px-4 ${
+              pathname === "/meals" ? "border  rounded-sm" : ""
             }`}
           >
             <Link href="/meals">Browse Meals</Link>
