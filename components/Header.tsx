@@ -5,6 +5,7 @@ import HeaderLogo from "@/assets/logo.png";
 import { Poppins } from "next/font/google";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import HeaderBackground from "./HeaderBackground";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,40 +18,43 @@ export default function Header() {
 
   console.log("current pathname:", pathname);
   return (
-    <header
-      className={`${poppins.className} flex items-center justify-between py-8 px-[1rem] md:px-[10%]`}
-    >
-      <Link
-        href="/"
-        className="text-3xl font-bold flex gap-5 items-center tracking-wide"
+    <>
+      <HeaderBackground />
+      <header
+        className={`${poppins.className} flex items-center justify-between py-8 px-[1rem] md:px-[10%]`}
       >
-        <Image
-          src={HeaderLogo}
-          alt="header logo"
-          className="w-19 h-19"
-          priority
-        />
-        NextLevel Food
-      </Link>
+        <Link
+          href="/"
+          className="text-3xl font-bold flex gap-5 items-center tracking-wide"
+        >
+          <Image
+            src={HeaderLogo}
+            alt="header logo"
+            className="w-19 h-19"
+            priority
+          />
+          NextLevel Food
+        </Link>
 
-      <nav className="">
-        <ul className="list-none m-0 p-0 flex gap-[1.5rem] text-xl font-medium">
-          <li
-            className={` duration-200 transform  border-white rounded-sm text-[#ddd6cb] py-2 px-4 ${
-              pathname === "/meals" ? "border" : ""
-            }`}
-          >
-            <Link href="/meals">Browse Meals</Link>
-          </li>
-          <li
-            className={` duration-200 transform  border-white rounded-sm text-[#ddd6cb] py-2  px-4 ${
-              pathname === "/community" ? "border" : ""
-            }`}
-          >
-            <Link href="/community">Foodies Community</Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <nav className="">
+          <ul className="list-none m-0 p-0 flex gap-[1.5rem] text-xl font-medium">
+            <li
+              className={` duration-200 transform  border-white rounded-sm text-[#ddd6cb] py-2 px-4 ${
+                pathname === "/meals" ? "border" : ""
+              }`}
+            >
+              <Link href="/meals">Browse Meals</Link>
+            </li>
+            <li
+              className={` duration-200 transform  border-white rounded-sm text-[#ddd6cb] py-2  px-4 ${
+                pathname === "/community" ? "border" : ""
+              }`}
+            >
+              <Link href="/community">Foodies Community</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </>
   );
 }
