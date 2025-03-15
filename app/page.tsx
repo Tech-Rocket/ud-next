@@ -5,12 +5,17 @@ export default function Home() {
     <>
       <div className="p-5">
         <h1>Official Homepage</h1>
-        <p className="mt-2">
-          <Link href="/about" className="border-2 border-black  py-2 px-3">
-            Link to the about page
-          </Link>
-        </p>
       </div>
+
+      <p>
+        <Link href="/meals">Meals</Link>
+      </p>
+      <p>
+        <Link href="/meals/share">Share Meals</Link>
+      </p>
+      <p>
+        <Link href="/community">Community</Link>
+      </p>
     </>
   );
 }
