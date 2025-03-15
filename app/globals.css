@@ -27,6 +27,14 @@ body {
   background: radial-gradient(#282c34, #282c34);
 }
 
+.nav a:hover {
+  background: linear-gradient(90deg, #ff8a05, #f9b331);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 18px rgba(248, 190, 42, 0.8);
+}
+
 main,
 nav {
   @apply max-w-6xl mx-auto my-12;

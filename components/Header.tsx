@@ -28,17 +28,17 @@ export default function Header() {
       </Link>
 
       <nav className="">
-        <ul className="list-none m-0 p-0 flex gap-[1.5rem] font-[1.5rem]">
+        <ul className="list-none m-0 p-0 flex gap-[1.5rem] text-xl font-medium">
           <li
-            className={` duration-200 transform  border-white text-[#ddd6cb] py-2 font-bold px-4 ${
-              pathname === "/meals" ? "border  rounded-sm" : ""
+            className={` duration-200 transform  border-white rounded-sm text-[#ddd6cb] py-2 px-4 ${
+              pathname === "/meals" ? "border" : ""
             }`}
           >
             <Link href="/meals">Browse Meals</Link>
           </li>
           <li
-            className={` duration-200 transform  text-[#ddd6cb] py-2 font-bold px-4 ${
-              pathname === "/community" ? " border border-white rounded-sm" : ""
+            className={` duration-200 transform  border-white rounded-sm text-[#ddd6cb] py-2  px-4 ${
+              pathname === "/community" ? "border" : ""
             }`}
           >
             <Link href="/community">Foodies Community</Link>
